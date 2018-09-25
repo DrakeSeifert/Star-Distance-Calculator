@@ -18,15 +18,16 @@ int main() {
 	}
 
 	int ans;
-	cout << "Enter distance from Earth in ly: ";
+	cout << "Enter distance from Earth in light years: ";
 	cin >> ans;
 
 	int validStars = 0;
 	int starDistance;
+	cout << "Star ID:" << "\t" << "Star Distance (ly):" << endl;
 	for(int i; i < NUM_STARS; i++) {
 		starDistance = star[i].distance();
 		if(starDistance <= ans) {
-			cout << i << "\t" << starDistance << endl;
+			cout << i << "\t\t" << starDistance << endl;
 			validStars++;
 		}
 	}
